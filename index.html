@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Szívfa sorsa – Age of Sigmar háziverseny · Ghyran</title>
+<meta name="description" content="Szezonzáró Age of Sigmar háziverseny Ghyranban, az Élet Birodalmában. 2026. december 20., vasárnap · 1500 pont · General's Handbook 2025–26.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="A Szívfa sorsa – Age of Sigmar háziverseny">
+<meta property="og:description" content="Szezonzáró verseny Ghyranban · 2026. december 20., vasárnap · 1500 pont">
+<meta property="og:image" content="https://justasimpleman-commits.github.io/aosverseny/assets/og.jpg">
+<meta property="og:url" content="https://justasimpleman-commits.github.io/aosverseny/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #eef3d6;
+    --text: #dfe8cc;
+    --muted: #b3c29a;
+    --lime: #b6dc5f;
+    --gold: #d9c46a;
+    --moss: #5f8a33;
+    --rot: #c9b54a;
+    --bg: #0b170b;
+    --panel: rgba(9,20,10,0.82);
+    --line: rgba(182,220,95,0.32);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Lora', Georgia, serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+  a { color: var(--lime); }
+
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh; min-height: 100svh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 48px 20px;
+    background: linear-gradient(180deg, rgba(6,14,6,0.45) 0%, rgba(6,14,6,0) 25%, rgba(6,14,6,0) 70%, var(--bg) 100%),
+                url('assets/hero.jpg') center / cover no-repeat;
+    text-align: center;
+  }
+  .eyebrow { font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 6px; color: var(--cream); text-transform: uppercase; margin-bottom: 28px; }
+  .hero-card {
+    background: rgba(6,16,7,0.72); border: 1px solid rgba(182,220,95,0.45); border-radius: 4px;
+    padding: 48px 32px; width: 100%; max-width: 760px;
+  }
+  .hero h1 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(40px, 9vw, 76px); line-height: 1.05; letter-spacing: 3px; color: var(--cream); }
+  .hero .realm { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(16px, 3.4vw, 28px); letter-spacing: 2px; color: var(--lime); margin-top: 18px; }
+  .rule { width: min(420px, 80%); height: 2px; margin: 28px auto; background: linear-gradient(90deg, transparent, var(--lime), transparent); }
+  .hero .sub { font-family: 'Poppins', sans-serif; font-size: clamp(12px, 2.2vw, 16px); letter-spacing: 3px; text-transform: uppercase; }
+  .hero-facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 28px; }
+  .chip { font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 500; color: var(--cream); background: rgba(95,138,51,0.25); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; }
+  .hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 32px; }
+  .btn { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; padding: 12px 22px; border-radius: 3px; border: 1px solid var(--lime); }
+  .btn-primary { background: var(--lime); color: #10200d; }
+  .btn-ghost { color: var(--lime); background: rgba(6,16,7,0.6); }
+  .btn:hover { filter: brightness(1.1); }
+
+  /* ===== SECTIONS ===== */
+  section { padding: 72px 0; }
+  .section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; border-bottom: 2px solid var(--moss); padding-bottom: 14px; margin-bottom: 28px; }
+  .section-head h2 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(26px, 5vw, 38px); letter-spacing: 2px; color: var(--cream); text-transform: uppercase; }
+  .tag { font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 32px; }
+
+  .story { background: linear-gradient(180deg, var(--bg) 0%, rgba(11,23,11,0.55) 12%, rgba(11,23,11,0.55) 88%, var(--bg) 100%), url('assets/story.jpg') center / cover no-repeat; }
+  .plain { background: radial-gradient(ellipse at 30% 0%, #1c3016 0%, #0f1d0e 55%, #081208 100%); }
+
+  .prologue { border-left: 3px solid var(--lime); padding: 2px 0 2px 16px; margin-bottom: 26px; }
+  .label { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; }
+  .prologue p { font-style: italic; font-size: 20px; color: var(--lime); line-height: 1.45; }
+  .story-text p { font-size: 17px; line-height: 1.75; margin-bottom: 16px; text-align: justify; hyphens: auto; }
+  .story-text p:first-child::first-letter { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 52px; color: var(--lime); float: left; line-height: 0.85; padding: 4px 6px 0 0; }
+  .story-text .closing { font-style: italic; color: var(--gold); text-align: center; }
+  figure { margin-top: 26px; }
+  figure img { width: 100%; display: block; border: 1px solid rgba(182,220,95,0.5); border-radius: 3px; }
+  figcaption { font-family: 'Poppins', sans-serif; font-size: 13px; color: var(--muted); text-align: center; margin-top: 10px; }
+  figcaption b { color: var(--lime); letter-spacing: 1.5px; text-transform: uppercase; }
+
+  .block { margin-bottom: 30px; }
+  .block:last-child { margin-bottom: 0; }
+  .block h3 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 1px; color: var(--lime); text-transform: uppercase; border-left: 3px solid var(--moss); padding-left: 12px; margin-bottom: 14px; }
+  ul.list { list-style: none; }
+  ul.list li { position: relative; padding-left: 24px; margin-bottom: 8px; font-size: 16px; }
+  ul.list li::before { content: '\2766'; position: absolute; left: 0; top: 1px; color: var(--moss); }
+  ul.list b { color: var(--cream); }
+  ul.list a b, ul.list a { color: var(--lime); }
+
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .card { border: 1px solid var(--line); border-radius: 4px; background: rgba(0,0,0,0.25); padding: 16px; }
+  .battle { text-align: center; background: rgba(95,138,51,0.16); }
+  .battle .n { font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; }
+  .battle .bp { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 24px; color: var(--lime); margin: 6px 0 2px; }
+  .battle .name { font-style: italic; }
+  .victory .t { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; margin-bottom: 6px; }
+  .major { color: var(--lime); } .minor { color: var(--gold); } .draw { color: #a3b596; }
+  .points { text-align: center; padding: 14px; }
+  .points .big { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 32px; color: var(--lime); line-height: 1.2; }
+  .points .small { font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; }
+
+  .date { text-align: center; margin-bottom: 36px; }
+  .date .d2 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(24px, 5vw, 36px); color: var(--cream); margin-top: 6px; }
+  .date .d3 { font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 20px; letter-spacing: 2px; color: var(--lime); }
+
+  .timeline { list-style: none; }
+  .timeline li { display: grid; grid-template-columns: 80px 24px 1fr; }
+  .timeline .time { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 20px; color: var(--lime); padding-top: 2px; }
+  .timeline .line { display: flex; flex-direction: column; align-items: center; }
+  .timeline .dot { width: 11px; height: 11px; border-radius: 50%; background: var(--lime); margin-top: 11px; flex-shrink: 0; }
+  .timeline .hl .dot { background: var(--rot); }
+  .timeline .bar { width: 2px; flex: 1; background: linear-gradient(180deg, rgba(182,220,95,0.7), rgba(182,220,95,0.1)); }
+  .timeline li:last-child .bar { display: none; }
+  .timeline .body { padding: 0 0 26px 14px; }
+  .timeline .title { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 18px; color: var(--cream); }
+  .timeline .hl .title { color: var(--lime); }
+  .timeline .desc { color: var(--muted); font-size: 15px; }
+
+  footer { text-align: center; padding: 40px 20px 56px; font-family: 'Poppins', sans-serif; font-size: 13px; color: #8fa27c; }
+  footer a { color: var(--lime); }
+
+  @media (max-width: 640px) {
+    section { padding: 52px 0; }
+    .panel { padding: 22px 18px; }
+    .hero-card { padding: 34px 18px; }
+    .grid3 { grid-template-columns: 1fr; }
+    .story-text p { text-align: left; font-size: 16px; }
+    .timeline li { grid-template-columns: 58px 20px 1fr; }
+    .timeline .time { font-size: 16px; }
+    .timeline .title { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="eyebrow">Age of Sigmar · Háziverseny</div>
+  <div class="hero-card">
+    <h1>A SZÍVFA<br>SORSA</h1>
+    <div class="realm">GHYRAN — AZ ÉLET BIRODALMA</div>
+    <div class="rule"></div>
+    <div class="sub">Szezonzáró verseny · 2025–26</div>
+    <div class="hero-facts">
+      <span class="chip">2026. december 20. · vasárnap</span>
+      <span class="chip">1500 pont</span>
+      <span class="chip">3 csata · 6 fő</span>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#jelentkezes">Jelentkezés</a>
+      <a class="btn btn-ghost" href="https://fb.me/e/72zIffFjy" target="_blank" rel="noopener">Facebook esemény</a>
+      <a class="btn btn-ghost" href="assets/kiiras.pdf" download>PDF letöltése</a>
+    </div>
+  </div>
+</header>
+
+<section class="story" id="elotortenet">
+  <div class="wrap">
+    <div class="section-head"><h2>Előtörténet</h2><span class="tag">01 · Az Élet Birodalma</span></div>
+    <div class="panel">
+      <div class="prologue">
+        <div class="label">Előszó</div>
+        <p>Búcsúztassuk el a 2025–26-os szezont egy utolsó versennyel Ghyranban!</p>
+      </div>
+      <div class="story-text">
+        <p>Ghyran, az Élet Birodalma, ahol az ősi erdők szellemei időtlen idők óta őrzik a végtelen virágzást, most halálos veszélybe került. Nurgle rothadása megfertőzte a birodalmat: a folyók iszappá sűrűsödnek, a lombok penészes fátylat öltenek, és a termékeny földből kórságos bimbók fakadnak.</p>
+        <p>A fertőzés kérlelhetetlenül halad Thyria mélye felé, ahol az ősi Szívfa dobog. Ha a rothadás eljut hozzá, szörnyűséges energiák szabadulhatnak fel, és Ghyran sorsa örökre megpecsételődik.</p>
+        <p>Minden hadúrnak döntenie kell. Vannak, akik megállítanák a rothadást, hogy az ősi erdők továbbra is virulhassanak – a hősöket az erdők szellemei fogják megjutalmazni. Mások épp az ellenkezőjét akarják: a túlburjánzott élet adományával fertőznék meg az ősi erdőt, és ők Nurgle Nagyapó bőkezű jutalmára számíthatnak.</p>
+        <p class="closing">Gyógyítás vagy fertőzés? Ghyranban a döntés a tiéd.</p>
+      </div>
+      <figure>
+        <img src="assets/living-city.jpg" alt="Ghyran ősi erdei">
+        <figcaption><b>Thyria ősi erdei</b> · itt, a birodalom mélyén dobog a Szívfa, amelyért a csaták zajlanak.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="plain" id="szabalyok">
+  <div class="wrap">
+    <div class="section-head"><h2>Szabályrendszer</h2><span class="tag">02 · Az Erdő Törvényei</span></div>
+    <div class="panel">
+      <div class="block">
+        <h3>Alapok</h3>
+        <ul class="list">
+          <li>A sereget a <b>General's Handbook 2025–26</b> szerint kell összeállítani.</li>
+          <li>A <b>Scourge of Ghyran</b> battle profilok használhatók.</li>
+          <li><b>Legends</b> egységek engedélyezettek.</li>
+          <li>Négyzetes talp csak akkor engedélyezett, ha az élhossza megegyezik a hivatalos körtalp átmérőjével (ovális talp esetén az élhossz a leghosszabb résszel egyezik meg) – de ezt inkább kerüljük.</li>
+          <li>Festettségi követelmény <b>nincs</b>.</li>
+          <li>Más gyártó figurái is használhatók.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h3>Sereg pontok</h3>
+        <div class="card points"><div class="big">1500 PONT</div><div class="small">Sereg mérete</div></div>
+      </div>
+      <div class="block">
+        <h3>Csaták</h3>
+        <div class="grid3">
+          <div class="card battle"><div class="n">Csata 1</div><div class="bp">BP 5</div><div class="name">Creeping Corruption</div></div>
+          <div class="card battle"><div class="n">Csata 2</div><div class="bp">BP 6</div><div class="name">Linked Ley Lines</div></div>
+          <div class="card battle"><div class="n">Csata 3</div><div class="bp">BP 3</div><div class="name">Bountiful Equinox</div></div>
+        </div>
+      </div>
+      <div class="block">
+        <h3>Győzelem</h3>
+        <div class="grid3">
+          <div class="card victory"><div class="t major">Major győzelem</div>5 vagy annál több ponttal megnyert csata.</div>
+          <div class="card victory"><div class="t minor">Minor győzelem</div>5-nél kevesebb ponttal megnyert csata.</div>
+          <div class="card victory"><div class="t draw">Döntetlen</div>Egál pontszám mindkét oldalon.</div>
+        </div>
+      </div>
+      <div class="block">
+        <h3>Tiebreaker</h3>
+        <ul class="list">
+          <li>Végeredményben azonos állás esetén a <b>scored VP</b> (a csaták során ténylegesen megszerzett győzelmi pontok összege) dönt a helyezésről.</li>
+        </ul>
+      </div>
+      <div class="block" id="jelentkezes">
+        <h3>Jelentkezés</h3>
+        <ul class="list">
+          <li>A jelentkezés a sereglista e-mailes beküldésével történik: <a href="mailto:voros.andras1993@gmail.com"><b>voros.andras1993@gmail.com</b></a></li>
+          <li>Elfogadott formátumok: <a href="https://warnexus.ageofspoon.com/" target="_blank" rel="noopener"><b>Warnexus</b></a>, <b>New Recruit</b> vagy a hivatalos <b>Warhammer AoS app</b> text exportja.</li>
+          <li>Az <b>első hat beküldött lista</b> vehet részt a versenyen. A jelentkezés <b>ingyenes</b>.</li>
+          <li>Facebook esemény: <a href="https://fb.me/e/72zIffFjy" target="_blank" rel="noopener"><b>fb.me/e/72zIffFjy</b></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="plain" id="napirend">
+  <div class="wrap">
+    <div class="section-head"><h2>Napirend</h2><span class="tag">03 · Lebonyolítás</span></div>
+    <div class="panel">
+      <div class="date">
+        <div class="label">A verseny időpontja</div>
+        <div class="d2">2026. december 20. · vasárnap</div>
+        <div class="d3">09:00 – 18:00</div>
+      </div>
+      <ol class="timeline">
+        <li><div class="time">09:00</div><div class="line"><div class="dot"></div><div class="bar"></div></div><div class="body"><div class="title">Megérkezés, setup, párosítás</div><div class="desc">Regisztráció, seregek felállítása, első kör párosítása.</div></div></li>
+        <li class="hl"><div class="time">09:30</div><div class="line"><div class="dot"></div><div class="bar"></div></div><div class="body"><div class="title">1. meccs — BP 5: Creeping Corruption</div><div class="desc">09:30 – 12:00 · A rothadás első hulláma eléri az erdő szélét.</div></div></li>
+        <li><div class="time">12:00</div><div class="line"><div class="dot"></div><div class="bar"></div></div><div class="body"><div class="title">Ebédszünet</div><div class="desc">12:00 – 12:30 · Pihenő az ősi fák árnyékában.</div></div></li>
+        <li class="hl"><div class="time">12:30</div><div class="line"><div class="dot"></div><div class="bar"></div></div><div class="body"><div class="title">2. meccs — BP 6: Linked Ley Lines</div><div class="desc">12:30 – 15:00 · Harc a birodalom életerő-vonalaiért.</div></div></li>
+        <li class="hl"><div class="time">15:00</div><div class="line"><div class="dot"></div><div class="bar"></div></div><div class="body"><div class="title">3. meccs — BP 3: Bountiful Equinox</div><div class="desc">15:00 – 17:30 · A döntő összecsapás a Szívfáért.</div></div></li>
+        <li><div class="time">17:30</div><div class="line"><div class="dot"></div><div class="bar"></div></div><div class="body"><div class="title">Eredményhirdetés</div><div class="desc">Az erdők szellemei vagy Nurgle Nagyapó jutalmaz?</div></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Age of Sigmar háziverseny · Ghyran, az Élet Birodalma<br>
+  <a href="https://fb.me/e/72zIffFjy" target="_blank" rel="noopener">Facebook esemény</a> · <a href="mailto:voros.andras1993@gmail.com">voros.andras1993@gmail.com</a> · <a href="assets/kiiras.pdf" download>PDF kiírás</a>
+</footer>
+
+</body>
+</html>
