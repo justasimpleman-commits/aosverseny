@@ -67,7 +67,7 @@
   .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 32px; }
 
   .story { background: linear-gradient(180deg, var(--bg) 0%, rgba(11,23,11,0.55) 12%, rgba(11,23,11,0.55) 88%, var(--bg) 100%), url('assets/story.jpg') center / cover no-repeat; }
-  .plain { background: radial-gradient(ellipse at 30% 0%, #1c3016 0%, #0f1d0e 55%, #081208 100%); }
+  .plain-group { background: linear-gradient(180deg, var(--bg) 0%, #12230f 45%, #0d1a0c 75%, var(--bg) 100%); }
 
   .prologue { border-left: 3px solid var(--lime); padding: 2px 0 2px 16px; margin-bottom: 26px; }
   .label { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; }
@@ -150,7 +150,6 @@
     <div class="hero-actions">
       <a class="btn btn-primary" href="#jelentkezes">Jelentkezés</a>
       <a class="btn btn-ghost" href="https://fb.me/e/72zIffFjy" target="_blank" rel="noopener">Facebook esemény</a>
-      <a class="btn btn-ghost" href="assets/kiiras.pdf" download>PDF letöltése</a>
     </div>
   </div>
 </header>
@@ -177,7 +176,8 @@
   </div>
 </section>
 
-<section class="plain" id="szabalyok">
+<div class="plain-group">
+<section id="szabalyok">
   <div class="wrap">
     <div class="section-head"><h2>Szabályrendszer</h2><span class="tag">02 · Az Erdő Törvényei</span></div>
     <div class="panel">
@@ -231,7 +231,7 @@
   </div>
 </section>
 
-<section class="plain" id="napirend">
+<section id="napirend">
   <div class="wrap">
     <div class="section-head"><h2>Napirend</h2><span class="tag">03 · Lebonyolítás</span></div>
     <div class="panel">
@@ -251,10 +251,11 @@
     </div>
   </div>
 </section>
+</div>
 
 <footer>
   Age of Sigmar háziverseny · Ghyran, az Élet Birodalma<br>
-  <a href="https://fb.me/e/72zIffFjy" target="_blank" rel="noopener">Facebook esemény</a> · <a href="mailto:voros.andras1993@gmail.com">voros.andras1993@gmail.com</a> · <a href="assets/kiiras.pdf" download>PDF kiírás</a>
+  <a href="https://fb.me/e/72zIffFjy" target="_blank" rel="noopener">Facebook esemény</a> · <a href="mailto:voros.andras1993@gmail.com">voros.andras1993@gmail.com</a>
 </footer>
 
 </body>
